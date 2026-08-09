@@ -53,6 +53,33 @@ medical record, and mark it complete as the doctor. Register a third account and
 promote it to `admin` directly in MongoDB (`role: "admin"`) to access the admin
 panel — this is deliberate: there's no public sign-up path to an admin account.
 
+### 4. Seed data (optional)
+
+Instead of registering accounts by hand, populate the database with demo data:
+
+```bash
+cd backend
+npm run seed
+```
+
+This **clears** the `User`, `DoctorProfile`, `PatientProfile`, `Appointment`,
+`MedicalRecord`, and `Bill` collections in whatever database `MONGO_URI` points
+to, then creates:
+
+| Role    | Email                              | Password       |
+| ------- | ----------------------------------- | -------------- |
+| Admin   | `admin@meridianhealth.test`         | `Password123!` |
+| Doctor  | `ananya.rao@meridianhealth.test`    | `Password123!` |
+| Doctor  | `marcus.chen@meridianhealth.test`   | `Password123!` |
+| Doctor  | `priya.nair@meridianhealth.test`    | `Password123!` |
+| Patient | `john.carter@example.test`          | `Password123!` |
+| Patient | `meera.iyer@example.test`           | `Password123!` |
+| Patient | `david.okafor@example.test`         | `Password123!` |
+
+plus a handful of sample appointments (past/upcoming, pending/confirmed/completed),
+one medical record, and one unpaid bill, so the dashboards aren't empty on first
+login.
+
 ## Deploying to Vercel
 
 This repo deploys as **two separate Vercel projects** pointed at the same GitHub
