@@ -68,7 +68,6 @@ to, then creates:
 
 | Role    | Email                              | Password       |
 | ------- | ----------------------------------- | -------------- |
-| Admin   | `admin@meridianhealth.test`         | `Password123!` |
 | Doctor  | `ananya.rao@meridianhealth.test`    | `Password123!` |
 | Doctor  | `marcus.chen@meridianhealth.test`   | `Password123!` |
 | Doctor  | `priya.nair@meridianhealth.test`    | `Password123!` |
